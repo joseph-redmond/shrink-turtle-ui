@@ -1,0 +1,16 @@
+<section class="w-full">
+  <button class="btn btn-outline" routerLink="/">Back</button>
+</section>
+<section class="flex justify-center items-center min-h-screen -mt-16">
+  <section class="flex flex-col items-center max-w-md">
+    <img src="assets/images/tturtle-logo-main-transparent.png">
+    <h1 class="font-semibold italic text-3xl mb-5">Here's your shrunken url</h1>
+    <ng-container *ngIf="(shrinkResponse$ | async) as data; else badResponse">
+      <h1 class="text-lg font-semibold">{{data.shortenUrl}}</h1>
+    </ng-container>
+  </section>
+</section>
+
+<ng-template #badResponse>
+  <h1>Request to shrink the url failed. Please try again later.</h1>
+</ng-template>

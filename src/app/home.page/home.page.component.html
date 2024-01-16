@@ -1,0 +1,10 @@
+<section class="flex justify-center items-center min-h-screen">
+  <section class="flex flex-col items-center max-w-md">
+    <img src="assets/images/tturtle-logo-main-transparent.png">
+    <h1 class="font-semibold italic text-3xl">Shrink your url</h1>
+    <section class="flex mt-5 w-full justify-center">
+      <input class="input input-bordered input-secondary mr-5 w-full" type="text" [(ngModel)]="url">
+      <button class="btn btn-secondary" (click)="shrink()">Shrink</button>
+    </section>
+  </section>
+</section>
