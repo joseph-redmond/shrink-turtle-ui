@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class ShrinkService {
 
-  private apiUrl: string = 'http://localhost:5000/urls';
+  private apiUrl: string = 'https://shrunk.tturtle.org/urls';
   constructor(private http: HttpClient) { }
 
   public shrinkUrl(url: string): Observable<ShrinkResponse> {
